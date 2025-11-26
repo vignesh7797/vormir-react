@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef } from 'react';
-import { Slot } from '@radix-ui/react-slot';
+import { Slot } from '../Slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Loader2 } from 'lucide-react';
 import { cn } from '@/utils';

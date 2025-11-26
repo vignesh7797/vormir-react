@@ -87,6 +87,97 @@ function App() {
 export default App;
 ```
 
+### Phase 6 Components Usage
+
+```tsx
+import { 
+  Slider, 
+  Drawer, 
+  Popover, 
+  ContextMenu,
+  Combobox,
+  MultiSelect,
+  DatePicker,
+  ColorPicker,
+  Button
+} from '@vormir/react';
+import { useState } from 'react';
+
+// Slider - Range input
+function SliderExample() {
+  const [value, setValue] = useState(50);
+  return (
+    <Slider 
+      min={0} 
+      max={100} 
+      value={value} 
+      onChange={setValue}
+      showTooltip
+      marks={[0, 25, 50, 75, 100]}
+    />
+  );
+}
+
+// Drawer - Side panel
+function DrawerExample() {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Drawer</Button>
+      <Drawer
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Drawer Title"
+        position="right"
+        size="md"
+      >
+        <p>Drawer content goes here</p>
+      </Drawer>
+    </>
+  );
+}
+
+// Combobox - Autocomplete
+function ComboboxExample() {
+  const options = [
+    { value: 'apple', label: 'Apple' },
+    { value: 'banana', label: 'Banana' },
+    { value: 'cherry', label: 'Cherry' },
+  ];
+  return (
+    <Combobox
+      options={options}
+      placeholder="Select a fruit..."
+      allowCustom
+    />
+  );
+}
+
+// DatePicker - Calendar
+function DatePickerExample() {
+  const [date, setDate] = useState<Date | null>(null);
+  return (
+    <DatePicker
+      mode="single"
+      value={date}
+      onChange={setDate}
+    />
+  );
+}
+
+// ColorPicker - Color selection
+function ColorPickerExample() {
+  const [color, setColor] = useState('#3b82f6');
+  return (
+    <ColorPicker
+      value={color}
+      onChange={setColor}
+      showRgbInputs
+    />
+  );
+}
+```
+
 ## 🎨 Components
 
 Vormir UI provides a comprehensive set of components:
@@ -117,11 +208,46 @@ Vormir UI provides a comprehensive set of components:
 - **FormErrorMessage** - Error display with icon
 - **FormHelperText** - Helper text for form guidance
 
-### Coming Soon (Phase 3+)
-- Feedback (Alert, Toast, Modal, Tooltip, Progress, Skeleton)
-- Navigation (Menu, Tabs, Breadcrumbs, Pagination)
-- Data Display (Card, Table, Badge, Avatar, Accordion)
-- Advanced (DatePicker, Carousel, FileUpload, CommandMenu)
+### Feedback Components (✅ Phase 3)
+- **Alert** - Notification banners with 5 variants and closable option
+- **Toast** - Temporary notifications with provider, 6 positions, auto-dismiss
+- **Modal/Dialog** - Overlay with focus trap, ESC key, body scroll lock
+- **Tooltip** - Contextual help with 4 positions and custom delays
+- **Progress** - Linear and circular progress indicators with variants
+- **Skeleton** - Loading placeholders with pulse animation
+
+### Navigation Components (✅ Phase 4)
+- **Menu** - Dropdown menus with submenus, keyboard navigation, 6 positions
+- **Tabs** - Tabbed interface with 3 variants (default, pills, enclosed)
+- **Breadcrumbs** - Navigation trails with collapsing and custom separators
+- **Pagination** - Page navigation with info display and size selector
+- **Sidebar** - Collapsible side navigation with overlay mode
+- **CommandPalette** - Keyboard-driven command menu (⌘K) with search
+
+### Data Display Components (✅ Phase 5)
+- **Card** - Content container with 4 variants, image support, interactive mode
+- **Badge** - Status indicators with 4 variants, 6 colors, removable option
+- **Avatar** - User profile images with fallbacks, status indicators, groups
+- **Accordion** - Collapsible sections with single/multiple mode
+- **List** - Styled lists with icons, hover effects, custom spacing
+- **Table** - Data tables with sorting, selection, striped variants
+- **Timeline** - Event timeline with colors, icons, solid variant
+- **Stat** - Statistical display with trends, icons, 3 variants
+- **Code** - Syntax-highlighted code with line numbers and copy button
+- **Kbd** - Keyboard shortcut display
+
+### Advanced Input & Media Components (✅ Phase 6)
+- **Slider** - Range slider with single/dual thumbs, keyboard navigation, marks
+- **Drawer** - Side panel overlay with 4 positions, 4 sizes, animations
+- **Popover** - Floating content container with positioning and arrow
+- **ContextMenu** - Right-click menu with submenus and keyboard shortcuts
+- **Combobox** - Autocomplete input with search and custom values
+- **MultiSelect** - Multi-selection dropdown with checkboxes and badges
+- **DatePicker** - Calendar with single/range mode and date constraints
+- **ColorPicker** - Color selection with presets, HEX/RGB inputs
+
+### Coming Soon (Phase 7+)
+- Advanced (Carousel, FileUpload, Transfer, TreeSelect)
 - And many more...
 
 ## 🎭 Theme Customization

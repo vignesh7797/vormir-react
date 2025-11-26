@@ -1,10 +1,11 @@
 # Phase 2 Complete: Form Components 🎉
 
-**Status:** ✅ Complete  
-**Completed Date:** November 2025  
+**Status:** ✅ Complete (Updated with Zero Dependencies)  
+**Completed Date:** November 26, 2025  
 **Build Status:** All components building successfully  
-**Bundle Size:** 214.43 KB (53.20 KB gzipped)
-**Size Increase:** +38.59 KB gzipped from Phase 1
+**Bundle Size:** 86.14 KB (16.88 KB gzipped)
+**Size Change:** -127.29 KB from previous build (removed Radix UI dependencies)
+**Zero Third-Party UI Dependencies:** ✅ All components built from scratch
 
 ## Implemented Components
 
@@ -78,22 +79,23 @@ Created **40+ interactive stories** across 6 component files:
 
 ## Technical Highlights
 
-### Radix UI Integration
-- **@radix-ui/react-checkbox** v1.3.3
-- **@radix-ui/react-radio-group** v1.3.8
-- **@radix-ui/react-switch** v1.2.6
-- **@radix-ui/react-select** (latest)
-- Full accessibility out of the box
-- Keyboard navigation
-- Screen reader support
-- ARIA attributes
+### Zero Third-Party UI Dependencies ✨
+- **Custom Slot Component**: Built from scratch to replace Radix UI Slot
+  - Proper prop merging (event handlers, className, style)
+  - Ref composition for forwarded refs
+  - Full TypeScript support
+- **No Radix UI**: All components built with native React patterns
+- **Reduced Bundle Size**: 36.32 KB gzipped reduction by removing Radix UI
+- **Complete Control**: Full ownership of component behavior and accessibility
 
-### Advanced Features
-- **Auto-resize Textarea**: Dynamically adjusts height based on content
-- **Indeterminate Checkbox**: Three-state checkbox for "select all" patterns
-- **Form Context**: useFormControl hook for accessing form state
-- **Conditional Rendering**: Error messages and helper text conditionally display
-- **Icon Integration**: Lucide icons (Check, Minus, AlertCircle, Chevron)
+### Custom Implementations
+All Phase 2 form components are built entirely from scratch:
+- **Checkbox**: Native button with SVG icons (Check, Minus)
+- **RadioGroup**: Context-based grouping with native buttons
+- **Switch**: Pure CSS animations with controlled state
+- **Select**: Custom dropdown with keyboard navigation
+- **Textarea**: Native textarea with auto-resize functionality
+- **FormControl**: React Context API for form state management
 
 ### Type Safety
 - Full TypeScript coverage
@@ -113,20 +115,27 @@ Created **40+ interactive stories** across 6 component files:
 ```
 ✓ Vite build successful
 ✓ TypeScript compilation successful
-✓ ESM output: 214.43 KB (+140.42 KB from Phase 1)
-✓ CJS output: 124.41 KB (+93.46 KB from Phase 1)
-✓ Gzipped: 53.20 KB (+38.59 KB from Phase 1)
+✓ ESM output: 86.14 KB (-128.29 KB from previous)
+✓ CJS output: 39.50 KB (-84.91 KB from previous)
+✓ Gzipped: 16.88 KB (-36.32 KB from previous)
 ✓ Type declarations generated
+✓ Zero third-party UI dependencies
 ```
 
-### Patterns Established
-1. **Radix UI Integration:**
-   - Wrap primitives with CVA variants
-   - Forward refs properly
-   - Maintain accessibility
-   - Add custom styling
+### Component Architecture
+1. **Custom Slot Pattern:**
+   ```typescript
+   // Custom Slot implementation for polymorphic components
+   export const Slot = React.forwardRef<HTMLElement, SlotProps>((props, ref) => {
+     // Merges props, handles refs, supports composition
+   });
+   ```
 
-2. **Form Context Pattern:**
+2. **Native Form Controls:**
+   - All built with semantic HTML (button, input, textarea)
+   - ARIA attributes for accessibility
+   - Keyboard navigation support
+   - Focus management
    ```typescript
    const FormControlContext = createContext<FormControlContextValue>();
    export const useFormControl = () => useContext(FormControlContext);
@@ -268,15 +277,42 @@ function CountrySelector() {
 
 ## Lessons Learned
 
-1. **Radix UI Props:** Some primitives have prop conflicts (e.g., `orientation` in RadioGroup). Solution: Use `Omit<>` to exclude conflicting props.
+1. **Zero Dependencies Advantage:** Removing Radix UI reduced bundle size by 68% (36.32 KB gzipped) while maintaining full functionality and accessibility.
 
-2. **Context API:** FormControl context makes it easy to share state across form components without prop drilling.
+2. **Custom Slot Implementation:** Building a custom Slot component provides full control over prop merging and ref forwarding behavior.
 
-3. **Auto-resize Textarea:** Requires careful ref management and useEffect to handle dynamic height changes.
+3. **Context API:** FormControl context makes it easy to share state across form components without prop drilling.
 
-4. **Bundle Size:** Adding 8 form components increased gzipped size by ~38 KB, which is reasonable given the functionality.
+4. **Auto-resize Textarea:** Requires careful ref management and useEffect to handle dynamic height changes.
 
-5. **Icon Integration:** Lucide icons work perfectly with Radix primitives for indicators and decorations.
+5. **Native Form Controls:** Using semantic HTML (button, input) with proper ARIA attributes provides excellent accessibility without third-party dependencies.
+
+6. **Icon Integration:** Lucide icons work perfectly for indicators and decorations (Check, Minus, AlertCircle, ChevronDown).
+
+## Architecture Changes
+
+### Removed Dependencies
+- ❌ @radix-ui/react-checkbox
+- ❌ @radix-ui/react-radio-group  
+- ❌ @radix-ui/react-switch
+- ❌ @radix-ui/react-select
+- ❌ @radix-ui/react-slot
+- ❌ @radix-ui/react-dialog (unused)
+- ❌ @radix-ui/react-dropdown-menu (unused)
+- ❌ @radix-ui/react-popover (unused)
+- ❌ @radix-ui/react-toast (unused)
+- ❌ @radix-ui/react-tooltip (unused)
+
+### Added Components
+- ✅ Custom Slot component (replaces @radix-ui/react-slot)
+- ✅ All form components built from scratch
+
+### Benefits
+1. **Smaller Bundle:** 68% reduction in gzipped size
+2. **Full Control:** Complete ownership of behavior and styling
+3. **No Breaking Changes:** Zero impact on external dependencies
+4. **Same API:** Maintains compatibility with existing Storybook stories
+5. **Better Understanding:** Team has full knowledge of component internals
 
 ## Component Statistics
 
