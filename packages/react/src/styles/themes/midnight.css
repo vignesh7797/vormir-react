@@ -1,0 +1,164 @@
+/* ============================================ */
+/* MIDNIGHT THEME - Dark-First Pure Black      */
+/* ============================================ */
+
+@layer base {
+  [data-theme='midnight'] {
+    /* Backgrounds - Pure black for OLED */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Brand Colors - Electric Blue */
+    --brand-50: 220 100% 97%;
+    --brand-100: 220 95% 92%;
+    --brand-200: 220 92% 85%;
+    --brand-300: 220 90% 75%;
+    --brand-400: 220 88% 65%;
+    --brand-500: 220 85% 55%;
+    --brand-600: 220 88% 48%;
+    --brand-700: 220 90% 40%;
+    --brand-800: 220 92% 32%;
+    --brand-900: 220 94% 24%;
+    --brand-950: 220 96% 16%;
+
+    /* Primary - Vibrant Electric Blue */
+    --primary: 220 85% 55%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Secondary */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    /* Muted */
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Accent - Neon Cyan */
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    /* Semantic Colors - Vibrant for dark */
+    --success: 145 70% 50%;
+    --success-foreground: 0 0% 0%;
+    --success-50: 145 75% 97%;
+    --success-100: 145 72% 92%;
+    --success-200: 145 70% 84%;
+    --success-300: 145 68% 72%;
+    --success-400: 145 69% 60%;
+    --success-500: 145 70% 50%;
+    --success-600: 145 72% 42%;
+    --success-700: 145 74% 34%;
+    --success-800: 145 76% 26%;
+    --success-900: 145 78% 18%;
+
+    --error: 355 90% 62%;
+    --error-foreground: 0 0% 0%;
+    --error-50: 355 100% 97%;
+    --error-100: 355 95% 92%;
+    --error-200: 355 92% 85%;
+    --error-300: 355 90% 75%;
+    --error-400: 355 88% 68%;
+    --error-500: 355 90% 62%;
+    --error-600: 355 92% 54%;
+    --error-700: 355 93% 46%;
+    --error-800: 355 94% 38%;
+    --error-900: 355 95% 30%;
+
+    --warning: 45 100% 55%;
+    --warning-foreground: 0 0% 0%;
+    --warning-50: 45 100% 96%;
+    --warning-100: 45 98% 88%;
+    --warning-200: 45 96% 78%;
+    --warning-300: 45 94% 66%;
+    --warning-400: 45 96% 60%;
+    --warning-500: 45 100% 55%;
+    --warning-600: 45 95% 48%;
+    --warning-700: 45 90% 40%;
+    --warning-800: 45 85% 32%;
+    --warning-900: 45 80% 24%;
+
+    --info: 200 95% 58%;
+    --info-foreground: 0 0% 0%;
+    --info-50: 200 100% 96%;
+    --info-100: 200 95% 90%;
+    --info-200: 200 92% 82%;
+    --info-300: 200 90% 70%;
+    --info-400: 200 92% 64%;
+    --info-500: 200 95% 58%;
+    --info-600: 200 96% 50%;
+    --info-700: 200 94% 42%;
+    --info-800: 200 92% 34%;
+    --info-900: 200 90% 26%;
+
+    /* Neutral Colors - Pure grays */
+    --neutral-50: 0 0% 97%;
+    --neutral-100: 0 0% 93%;
+    --neutral-200: 0 0% 86%;
+    --neutral-300: 0 0% 72%;
+    --neutral-400: 0 0% 58%;
+    --neutral-500: 0 0% 45%;
+    --neutral-600: 0 0% 36%;
+    --neutral-700: 0 0% 28%;
+    --neutral-800: 0 0% 20%;
+    --neutral-900: 0 0% 13%;
+
+    /* Borders & Inputs - Visible but subtle */
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 220 85% 55%;
+
+    /* Destructive */
+    --destructive: 355 90% 62%;
+    --destructive-foreground: 0 0% 0%;
+
+    /* Border Radius */
+    --radius-lg: 1rem;
+    --radius-md: 0.75rem;
+    --radius-sm: 0.5rem;
+  }
+
+  /* Light mode for midnight theme - High contrast */
+  [data-theme='midnight']:not(.dark) {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 5%;
+
+    --primary: 220 90% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 94%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 180 85% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 145 75% 38%;
+    --success-foreground: 0 0% 100%;
+
+    --error: 355 90% 52%;
+    --error-foreground: 0 0% 100%;
+
+    --warning: 45 95% 48%;
+    --warning-foreground: 0 0% 5%;
+
+    --info: 200 92% 45%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 220 90% 42%;
+
+    --destructive: 355 90% 52%;
+    --destructive-foreground: 0 0% 100%;
+  }
+}

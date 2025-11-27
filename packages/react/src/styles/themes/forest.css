@@ -1,0 +1,171 @@
+/* ============================================ */
+/* FOREST THEME - Green & Earth Tones          */
+/* ============================================ */
+
+@layer base {
+  [data-theme='forest'] {
+    /* Backgrounds - Natural, earthy */
+    --background: 45 25% 98%;
+    --foreground: 155 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 155 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 30% 12%;
+
+    /* Brand Colors - Forest Green */
+    --brand-50: 155 65% 97%;
+    --brand-100: 155 60% 92%;
+    --brand-200: 155 58% 84%;
+    --brand-300: 155 56% 72%;
+    --brand-400: 155 54% 58%;
+    --brand-500: 155 52% 46%;
+    --brand-600: 155 58% 38%;
+    --brand-700: 155 62% 30%;
+    --brand-800: 155 65% 24%;
+    --brand-900: 155 68% 18%;
+    --brand-950: 155 72% 12%;
+
+    /* Primary - Deep Forest Green */
+    --primary: 155 58% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 45 20% 92%;
+    --secondary-foreground: 155 30% 20%;
+
+    /* Muted */
+    --muted: 45 25% 95%;
+    --muted-foreground: 45 15% 40%;
+
+    /* Accent - Autumn Orange */
+    --accent: 25 90% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Semantic Colors */
+    --success: 155 58% 38%;
+    --success-foreground: 0 0% 100%;
+    --success-50: 155 65% 97%;
+    --success-100: 155 60% 92%;
+    --success-200: 155 58% 84%;
+    --success-300: 155 56% 72%;
+    --success-400: 155 54% 58%;
+    --success-500: 155 52% 46%;
+    --success-600: 155 58% 38%;
+    --success-700: 155 62% 30%;
+    --success-800: 155 65% 24%;
+    --success-900: 155 68% 18%;
+
+    --error: 0 75% 52%;
+    --error-foreground: 0 0% 100%;
+    --error-50: 0 90% 97%;
+    --error-100: 0 85% 92%;
+    --error-200: 0 82% 85%;
+    --error-300: 0 80% 75%;
+    --error-400: 0 78% 65%;
+    --error-500: 0 75% 52%;
+    --error-600: 0 77% 45%;
+    --error-700: 0 78% 38%;
+    --error-800: 0 80% 30%;
+    --error-900: 0 82% 22%;
+
+    --warning: 40 96% 50%;
+    --warning-foreground: 155 30% 12%;
+    --warning-50: 40 100% 96%;
+    --warning-100: 40 98% 88%;
+    --warning-200: 40 96% 78%;
+    --warning-300: 40 94% 66%;
+    --warning-400: 40 95% 58%;
+    --warning-500: 40 96% 50%;
+    --warning-600: 40 92% 42%;
+    --warning-700: 40 88% 34%;
+    --warning-800: 40 82% 26%;
+    --warning-900: 40 75% 18%;
+
+    --info: 185 80% 42%;
+    --info-foreground: 0 0% 100%;
+    --info-50: 185 85% 96%;
+    --info-100: 185 82% 88%;
+    --info-200: 185 80% 78%;
+    --info-300: 185 78% 65%;
+    --info-400: 185 76% 54%;
+    --info-500: 185 80% 42%;
+    --info-600: 185 82% 35%;
+    --info-700: 185 84% 28%;
+    --info-800: 185 86% 22%;
+    --info-900: 185 88% 16%;
+
+    /* Neutral Colors - Warm earth tones */
+    --neutral-50: 45 20% 97%;
+    --neutral-100: 45 18% 93%;
+    --neutral-200: 45 15% 86%;
+    --neutral-300: 45 12% 72%;
+    --neutral-400: 45 10% 58%;
+    --neutral-500: 45 8% 45%;
+    --neutral-600: 45 10% 36%;
+    --neutral-700: 45 12% 28%;
+    --neutral-800: 45 14% 20%;
+    --neutral-900: 45 16% 13%;
+
+    /* Borders & Inputs */
+    --border: 45 25% 88%;
+    --input: 45 25% 88%;
+    --ring: 155 58% 38%;
+
+    /* Destructive */
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border Radius */
+    --radius-lg: 1rem;
+    --radius-md: 0.75rem;
+    --radius-sm: 0.5rem;
+  }
+
+  [data-theme='forest'].dark {
+    /* Backgrounds - Deep forest night */
+    --background: 155 25% 8%;
+    --foreground: 45 20% 95%;
+    --card: 155 22% 11%;
+    --card-foreground: 45 20% 95%;
+    --popover: 155 20% 13%;
+    --popover-foreground: 45 20% 95%;
+
+    /* Primary - Brighter green */
+    --primary: 155 52% 48%;
+    --primary-foreground: 155 25% 8%;
+
+    /* Secondary */
+    --secondary: 155 18% 18%;
+    --secondary-foreground: 45 20% 90%;
+
+    /* Muted */
+    --muted: 155 18% 16%;
+    --muted-foreground: 45 15% 60%;
+
+    /* Accent - Warm autumn */
+    --accent: 25 92% 58%;
+    --accent-foreground: 155 25% 8%;
+
+    /* Semantic Colors */
+    --success: 155 52% 48%;
+    --success-foreground: 155 25% 8%;
+
+    --error: 0 72% 58%;
+    --error-foreground: 155 25% 8%;
+
+    --warning: 40 96% 58%;
+    --warning-foreground: 155 25% 8%;
+
+    --info: 185 75% 48%;
+    --info-foreground: 155 25% 8%;
+
+    /* Borders & Inputs */
+    --border: 155 20% 22%;
+    --input: 155 20% 22%;
+    --ring: 155 52% 48%;
+
+    /* Destructive */
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 155 25% 8%;
+  }
+}

@@ -122,6 +122,7 @@ export { Stack } from './components/Stack';
 
 // Theme
 export { ThemeProvider, useTheme } from './theme';
+export * from './utils/theme';
 
 // Types - Primitives
 export type { BoxProps } from './components/Box';
