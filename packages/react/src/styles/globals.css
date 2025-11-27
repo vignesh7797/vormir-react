@@ -4,128 +4,190 @@
 
 @layer base {
   :root {
-    /* Background & Foreground */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* ============================================ */
+    /* LIGHT MODE - Ocean Blue & Warm Neutrals     */
+    /* ============================================ */
+    
+    /* Backgrounds - Soft, warm whites with subtle warmth */
+    --background: 30 20% 99%;
+    --foreground: 215 25% 12%;
 
-    /* Card */
+    /* Card - Elevated surfaces with slight warmth */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 12%;
 
-    /* Popover */
+    /* Popover - Clean white for overlays */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 12%;
 
-    /* Brand Colors (Purple/Violet theme) */
-    --brand-50: 270 100% 98%;
-    --brand-100: 269 100% 95%;
-    --brand-200: 269 100% 92%;
-    --brand-300: 269 97% 85%;
-    --brand-400: 270 95% 75%;
-    --brand-500: 270 91% 65%;
-    --brand-600: 271 81% 56%;
-    --brand-700: 272 72% 47%;
-    --brand-800: 272 67% 39%;
-    --brand-900: 273 60% 32%;
-    --brand-950: 274 87% 21%;
+    /* Brand Colors - Deep Ocean Blue with rich tones */
+    --brand-50: 210 100% 97%;
+    --brand-100: 210 95% 93%;
+    --brand-200: 210 91% 87%;
+    --brand-300: 210 88% 77%;
+    --brand-400: 210 83% 65%;
+    --brand-500: 210 78% 53%;
+    --brand-600: 210 85% 45%;
+    --brand-700: 210 90% 38%;
+    --brand-800: 210 88% 31%;
+    --brand-900: 210 82% 25%;
+    --brand-950: 210 85% 16%;
 
-    /* Primary (Brand) */
-    --primary: 271 81% 56%;
+    /* Primary - Deep Ocean Blue */
+    --primary: 210 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary */
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Soft Slate with warmth */
+    --secondary: 215 15% 92%;
+    --secondary-foreground: 215 25% 20%;
 
-    /* Muted */
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Subtle backgrounds */
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 15% 40%;
 
-    /* Accent */
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Warm Amber for highlights */
+    --accent: 35 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Success */
-    --success: 142 76% 36%;
+    /* Semantic Colors - Vibrant & Clear */
+    --success: 145 70% 42%;
     --success-foreground: 0 0% 100%;
+    --success-50: 145 65% 95%;
+    --success-100: 145 65% 88%;
+    --success-200: 145 65% 78%;
+    --success-300: 145 65% 65%;
+    --success-400: 145 68% 52%;
+    --success-500: 145 70% 42%;
+    --success-600: 145 72% 35%;
+    --success-700: 145 75% 28%;
+    --success-800: 145 78% 22%;
+    --success-900: 145 80% 16%;
 
-    /* Error */
-    --error: 0 84% 60%;
+    --error: 355 85% 55%;
     --error-foreground: 0 0% 100%;
+    --error-50: 355 100% 97%;
+    --error-100: 355 95% 92%;
+    --error-200: 355 90% 85%;
+    --error-300: 355 88% 75%;
+    --error-400: 355 86% 65%;
+    --error-500: 355 85% 55%;
+    --error-600: 355 87% 48%;
+    --error-700: 355 88% 40%;
+    --error-800: 355 89% 32%;
+    --error-900: 355 90% 24%;
 
-    /* Warning */
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
+    --warning: 35 95% 58%;
+    --warning-foreground: 215 25% 12%;
+    --warning-50: 35 100% 96%;
+    --warning-100: 35 98% 90%;
+    --warning-200: 35 96% 82%;
+    --warning-300: 35 94% 72%;
+    --warning-400: 35 95% 65%;
+    --warning-500: 35 95% 58%;
+    --warning-600: 35 92% 50%;
+    --warning-700: 35 88% 42%;
+    --warning-800: 35 82% 34%;
+    --warning-900: 35 75% 26%;
 
-    /* Info */
-    --info: 199 89% 48%;
+    --info: 200 90% 52%;
     --info-foreground: 0 0% 100%;
+    --info-50: 200 95% 96%;
+    --info-100: 200 92% 90%;
+    --info-200: 200 90% 82%;
+    --info-300: 200 89% 70%;
+    --info-400: 200 90% 60%;
+    --info-500: 200 90% 52%;
+    --info-600: 200 92% 45%;
+    --info-700: 200 93% 38%;
+    --info-800: 200 94% 30%;
+    --info-900: 200 95% 22%;
 
-    /* Border & Input */
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 271 81% 56%;
+    /* Neutral Colors - Warm grays with sophistication */
+    --neutral-50: 30 15% 97%;
+    --neutral-100: 30 12% 93%;
+    --neutral-200: 30 10% 86%;
+    --neutral-300: 30 8% 72%;
+    --neutral-400: 30 7% 58%;
+    --neutral-500: 30 6% 45%;
+    --neutral-600: 30 7% 36%;
+    --neutral-700: 30 8% 28%;
+    --neutral-800: 30 9% 20%;
+    --neutral-900: 30 10% 13%;
 
-    /* Border Radius */
-    --radius-lg: 0.75rem;
-    --radius-md: 0.5rem;
-    --radius-sm: 0.25rem;
+    /* Borders & Inputs - Subtle with good contrast */
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 210 85% 45%;
+
+    /* Destructive (alias for error) */
+    --destructive: 355 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border Radius - More pronounced for modern feel */
+    --radius-lg: 1rem;
+    --radius-md: 0.75rem;
+    --radius-sm: 0.5rem;
 
     /* Fonts */
     --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
       'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    --font-mono: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
   }
 
   .dark {
-    /* Background & Foreground */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* ============================================ */
+    /* DARK MODE - Deep Navy & Warm Accents        */
+    /* ============================================ */
+    
+    /* Backgrounds - Rich navy with depth */
+    --background: 220 30% 8%;
+    --foreground: 30 15% 95%;
 
-    /* Card */
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Card - Elevated dark surfaces */
+    --card: 220 28% 11%;
+    --card-foreground: 30 15% 95%;
 
-    /* Popover */
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Popover - Slightly lighter for contrast */
+    --popover: 220 28% 13%;
+    --popover-foreground: 30 15% 95%;
 
-    /* Primary (Brand) */
-    --primary: 271 81% 56%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Brighter Ocean Blue for dark mode */
+    --primary: 210 90% 58%;
+    --primary-foreground: 220 30% 8%;
 
-    /* Secondary */
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Muted slate */
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 30 15% 90%;
 
-    /* Muted */
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Muted - Subtle dark backgrounds */
+    --muted: 220 25% 16%;
+    --muted-foreground: 215 15% 60%;
 
-    /* Accent */
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent - Warm Amber stands out beautifully */
+    --accent: 35 90% 62%;
+    --accent-foreground: 220 30% 8%;
 
-    /* Success */
-    --success: 142 72% 29%;
-    --success-foreground: 0 0% 100%;
+    /* Semantic Colors - Adjusted for dark backgrounds */
+    --success: 145 65% 48%;
+    --success-foreground: 220 30% 8%;
 
-    /* Error */
-    --error: 0 62.8% 30.6%;
-    --error-foreground: 0 0% 100%;
+    --error: 355 80% 62%;
+    --error-foreground: 220 30% 8%;
 
-    /* Warning */
-    --warning: 38 92% 50%;
-    --warning-foreground: 0 0% 100%;
+    --warning: 35 95% 65%;
+    --warning-foreground: 220 30% 8%;
 
-    /* Info */
-    --info: 199 89% 48%;
-    --info-foreground: 0 0% 100%;
+    --info: 200 85% 58%;
+    --info-foreground: 220 30% 8%;
 
-    /* Border & Input */
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 271 81% 56%;
+    /* Borders & Inputs - Visible but not harsh */
+    --border: 220 25% 22%;
+    --input: 220 25% 22%;
+    --ring: 210 90% 58%;
+
+    /* Destructive (alias for error) */
+    --destructive: 355 80% 62%;
+    --destructive-foreground: 220 30% 8%;
   }
 }
 
