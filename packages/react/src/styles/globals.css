@@ -1,13 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Import all theme variants */
 @import './themes/ocean.css';
 @import './themes/forest.css';
 @import './themes/sunset.css';
 @import './themes/midnight.css';
 @import './themes/corporate.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
