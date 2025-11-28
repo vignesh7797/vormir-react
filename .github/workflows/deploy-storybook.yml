@@ -4,7 +4,6 @@ on:
   push:
     branches: 
       - main
-      - codespace-ubiquitous-invention-g6jrrq645qxfw565
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
