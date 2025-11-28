@@ -47,15 +47,12 @@ Vormir uses Tailwind CSS for styling. Add the following to your `tailwind.config
 ```js
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@vormir/react/dist/**/*.{js,mjs}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './node_modules/@vormir/react/dist/**/*.{js,mjs}'],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
 Import the global styles in your app:
@@ -87,7 +84,7 @@ import { ThemeProvider, useTheme, Button } from '@vormir/react';
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  
+
   return (
     <Button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
       Toggle {theme === 'light' ? '🌙' : '☀️'}
@@ -107,6 +104,7 @@ function App() {
 ## 📚 Components
 
 ### Primitives
+
 - **Box** - Polymorphic container component
 - **Text** - Typography component with variants
 - **Button** - Interactive button with multiple variants
@@ -115,12 +113,14 @@ function App() {
 - **Slot** - Composition primitive
 
 ### Layout
+
 - **Container** - Responsive max-width container
 - **Flex** - Flexbox layout
 - **Grid** - CSS Grid layout
 - **Stack** - Vertical/horizontal stack with spacing
 
 ### Form Components
+
 - **Checkbox** - Checkbox input
 - **Radio** - Radio button group
 - **Switch** - Toggle switch
@@ -131,6 +131,7 @@ function App() {
 - **FormHelperText** - Helper text for form fields
 
 ### Feedback
+
 - **Alert** - Inline notifications
 - **Toast** - Temporary notifications
 - **Modal** - Modal dialogs
@@ -141,6 +142,7 @@ function App() {
 - **Skeleton** - Loading placeholders
 
 ### Navigation
+
 - **Menu** - Dropdown menus
 - **Tabs** - Tabbed interfaces
 - **Breadcrumbs** - Navigation trails
@@ -149,6 +151,7 @@ function App() {
 - **CommandPalette** - Keyboard-driven command menu
 
 ### Data Display
+
 - **Card** - Content containers
 - **Badge** - Status indicators
 - **Avatar** - User profile images
@@ -161,6 +164,7 @@ function App() {
 - **Kbd** - Keyboard shortcuts
 
 ### Advanced
+
 - **DatePicker** - Date selection
 - **ColorPicker** - Color selection
 - **Slider** - Range input
@@ -177,7 +181,7 @@ import { ThemeProvider } from '@vormir/react';
 
 function App() {
   return (
-    <ThemeProvider 
+    <ThemeProvider
       defaultTheme="ocean" // 'default' | 'ocean' | 'forest' | 'sunset' | 'midnight' | 'corporate'
     >
       {/* Your app */}
@@ -203,9 +207,7 @@ const customTheme = {
   // ... more customization
 };
 
-<ThemeProvider theme={customTheme}>
-  {/* Your app */}
-</ThemeProvider>
+<ThemeProvider theme={customTheme}>{/* Your app */}</ThemeProvider>;
 ```
 
 ## 🔧 Usage Examples
@@ -229,13 +231,7 @@ import { Button } from '@vormir/react';
 ### Form with Validation
 
 ```tsx
-import { 
-  FormControl, 
-  FormLabel, 
-  Input, 
-  FormErrorMessage,
-  Button 
-} from '@vormir/react';
+import { FormControl, FormLabel, Input, FormErrorMessage, Button } from '@vormir/react';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -254,11 +250,7 @@ function LoginForm() {
     <form onSubmit={handleSubmit}>
       <FormControl isInvalid={!!error}>
         <FormLabel>Email</FormLabel>
-        <Input 
-          type="email" 
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         {error && <FormErrorMessage>{error}</FormErrorMessage>}
       </FormControl>
       <Button type="submit">Submit</Button>
@@ -287,7 +279,7 @@ import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@
       <TableCell>Admin</TableCell>
     </TableRow>
   </TableBody>
-</Table>
+</Table>;
 ```
 
 ### Toast Notifications
@@ -299,7 +291,7 @@ function NotificationDemo() {
   const toast = useToast();
 
   return (
-    <Button 
+    <Button
       onClick={() => {
         toast({
           title: 'Success!',
@@ -328,7 +320,7 @@ const CustomButton: React.FC<ButtonProps> = (props) => {
 
 ## 📖 Documentation
 
-- **Storybook**: [Coming soon]
+- **Storybook**: [https://vignesh7797.github.io/vormir-react/](https://vignesh7797.github.io/vormir-react/)
 - **GitHub**: [https://github.com/vignesh7797/vormir-react](https://github.com/vignesh7797/vormir-react)
 - **Examples**: Check the `/examples` folder in the repository
 
@@ -363,6 +355,7 @@ MIT © [Vignesh](https://github.com/vignesh7797)
 ## 🙏 Acknowledgments
 
 Built with inspiration from:
+
 - [Radix UI](https://radix-ui.com/) - Accessible component primitives
 - [shadcn/ui](https://ui.shadcn.com/) - Component architecture
 - [Chakra UI](https://chakra-ui.com/) - Developer experience
