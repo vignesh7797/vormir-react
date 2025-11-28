@@ -1,18 +1,34 @@
 {
-  "name": "@vormir/react",
-  "version": "1.0.0",
-  "description": "A modern, customizable React UI library",
+  "name": "@vormir-tech/react",
+  "version": "0.1.0",
+  "description": "A modern, accessible, and customizable React UI component library with built-in theming and dark mode support",
   "keywords": [
     "react",
+    "react-component",
     "ui",
     "components",
+    "component-library",
     "design-system",
+    "ui-library",
     "tailwind",
+    "tailwindcss",
     "typescript",
     "dark-mode",
-    "accessibility"
+    "theme",
+    "accessibility",
+    "a11y",
+    "aria",
+    "headless-ui",
+    "radix-ui",
+    "shadcn",
+    "forms",
+    "responsive"
   ],
-  "author": "Vignesh <vignesh7797@github>",
+  "author": {
+    "name": "Vignesh",
+    "email": "vignesh7797@gmail.com",
+    "url": "https://github.com/vignesh7797"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -40,7 +56,9 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
   ],
   "sideEffects": [
     "**/*.css"

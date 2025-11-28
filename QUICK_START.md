@@ -44,16 +44,16 @@ pnpm storybook
 
 ### Installation
 ```bash
-npm install @vormir/react
+npm install @vormir-tech/react
 # or
-pnpm add @vormir/react
+pnpm add @vormir-tech/react
 # or
-yarn add @vormir/react
+yarn add @vormir-tech/react
 ```
 
 ### Basic Usage
 ```tsx
-import { ThemeProvider, Button } from '@vormir/react';
+import { ThemeProvider, Button } from '@vormir-tech/react';
 
 function App() {
   return (

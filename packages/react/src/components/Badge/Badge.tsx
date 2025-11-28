@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 
 // Badge Styles
 const badgeVariants = cva(
-  'inline-flex items-center gap-1 rounded-full font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2',
+  'inline-flex items-center gap-1 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2',
   {
     variants: {
       variant: {
@@ -107,6 +107,11 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
       <span
         ref={ref}
         className={cn(badgeVariants({ variant, colorScheme, size }), className)}
+        style={{
+          borderRadius: 'var(--badge-radius)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         {...props}
       >
         {dot && (

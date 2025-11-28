@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef } from 'react';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   /** Show required indicator */

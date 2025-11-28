@@ -81,6 +81,11 @@ export const Checkbox = forwardRef<HTMLButtonElement, CheckboxProps>(
         aria-checked={checked === 'indeterminate' ? 'mixed' : checked}
         disabled={disabled}
         data-state={isChecked ? 'checked' : 'unchecked'}
+        style={{
+          borderRadius: 'var(--radius-sm)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         className={cn(
           checkboxVariants({ size }),
           isChecked && 'border-primary bg-primary text-primary-foreground',

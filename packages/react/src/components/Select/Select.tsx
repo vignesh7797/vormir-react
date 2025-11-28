@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../utils/cn';
 
 const selectTriggerVariants = cva(
-  'flex w-full items-center justify-between rounded-md border font-sans transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer [&>span]:line-clamp-1',
+  'flex w-full items-center justify-between border font-sans transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer [&>span]:line-clamp-1',
   {
     variants: {
       variant: {
@@ -94,6 +94,12 @@ export const SelectTrigger = forwardRef<HTMLButtonElement, SelectTriggerProps>(
         type="button"
         role="combobox"
         aria-expanded={context?.open}
+        style={{
+          borderRadius: 'var(--input-radius)',
+          padding: 'var(--input-padding)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         className={cn(selectTriggerVariants({ variant, size, className }))}
         onClick={handleClick}
         {...props}

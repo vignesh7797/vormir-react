@@ -4,17 +4,17 @@ import { cn } from '../../utils/cn';
 
 // Card Styles
 const cardVariants = cva(
-  'rounded-lg transition-colors',
+  'transition-colors',
   {
     variants: {
       variant: {
         default: 'bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800',
-        elevated: 'bg-white dark:bg-neutral-950 shadow-md hover:shadow-lg',
+        elevated: 'bg-white dark:bg-neutral-950',
         outlined: 'border-2 border-neutral-300 dark:border-neutral-700',
         ghost: 'hover:bg-neutral-50 dark:hover:bg-neutral-900',
       },
       interactive: {
-        true: 'cursor-pointer hover:shadow-lg transition-shadow',
+        true: 'cursor-pointer transition-shadow',
         false: '',
       },
     },
@@ -42,7 +42,14 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
     return (
       <div
         ref={ref}
-        className={cn(cardVariants({ variant, interactive: interactive || false }), className)}
+        className={cn(cardVariants({ variant, interactive }), className)}
+        style={{
+          borderRadius: 'var(--card-radius)',
+          padding: 'var(--card-padding)',
+          boxShadow: variant === 'elevated' ? 'var(--shadow-md)' : undefined,
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         {...props}
       >
         {children}

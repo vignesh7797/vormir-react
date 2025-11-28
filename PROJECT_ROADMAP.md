@@ -4,7 +4,7 @@
 
 **Status:** 🚧 In Development  
 **Target Release:** Q1 2026  
-**Package Name:** `@vormir/react`  
+**Package Name:** `@vormir-tech/react`  
 **Repository:** https://github.com/vignesh7797/vormir-react
 
 ---

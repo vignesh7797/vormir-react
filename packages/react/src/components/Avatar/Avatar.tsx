@@ -104,7 +104,16 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     const showImage = src && !imageError;
 
     return (
-      <div ref={ref} className={cn(avatarVariants({ size }), className)} {...props}>
+      <div
+        ref={ref}
+        style={{
+          borderRadius: 'var(--avatar-radius)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
+        className={cn(avatarVariants({ size }), className)}
+        {...props}
+      >
         {showImage ? (
           <img
             src={src}

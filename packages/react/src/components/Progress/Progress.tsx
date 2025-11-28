@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 const progressVariants = cva('w-full overflow-hidden rounded-full bg-secondary', {
   variants: {
@@ -61,15 +61,24 @@ export const Progress = forwardRef<HTMLDivElement, ProgressProps>(
           aria-valuemin={0}
           aria-valuemax={max}
           aria-valuenow={value}
+          style={{
+            borderRadius: 'var(--radius-full)',
+            transition: 'var(--transition-base)',
+            ...(props.style || {}),
+          }}
           className={cn(progressVariants({ size }))}
           {...props}
         >
           <div
+            style={{
+              borderRadius: 'var(--radius-full)',
+              transition: 'width var(--duration-300) var(--ease-in-out)',
+              width: `${percentage}%`,
+            }}
             className={cn(
-              'h-full transition-all duration-300 ease-in-out',
+              'h-full',
               variantClasses[variant]
             )}
-            style={{ width: `${percentage}%` }}
           />
         </div>
         {showValue && (

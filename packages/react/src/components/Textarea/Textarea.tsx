@@ -101,6 +101,12 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
 
     return (
       <textarea
+        style={{
+          borderRadius: 'var(--input-radius)',
+          padding: 'var(--input-padding)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         className={cn(
           textareaVariants({
             variant,

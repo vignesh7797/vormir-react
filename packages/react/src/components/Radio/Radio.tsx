@@ -130,6 +130,11 @@ export const RadioGroupItem = forwardRef<HTMLButtonElement, RadioGroupItemProps>
         aria-checked={checked}
         disabled={disabled}
         data-state={checked ? 'checked' : 'unchecked'}
+        style={{
+          borderRadius: 'var(--radius-full)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         className={cn(radioVariants({ size, className }))}
         onClick={handleClick}
         {...props}

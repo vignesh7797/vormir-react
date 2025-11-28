@@ -89,6 +89,11 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
         aria-checked={checked}
         disabled={disabled}
         data-state={checked ? 'checked' : 'unchecked'}
+        style={{
+          borderRadius: 'var(--radius-full)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         className={cn(
           switchVariants({ size }),
           checked ? 'bg-primary' : 'bg-input',
@@ -98,6 +103,10 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
         {...props}
       >
         <span
+          style={{
+            borderRadius: 'var(--radius-full)',
+            transition: 'var(--transition-base)',
+          }}
           className={cn(
             switchThumbVariants({ size }),
             translateX[size || 'md']

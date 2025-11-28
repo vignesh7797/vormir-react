@@ -123,6 +123,12 @@ export const AccordionItem = React.forwardRef<HTMLDivElement, AccordionItemProps
         ref={ref}
         data-state={isOpen ? 'open' : 'closed'}
         data-disabled={disabled ? 'true' : undefined}
+        style={{
+          borderRadius: 'var(--card-radius)',
+          boxShadow: isOpen ? 'var(--shadow-sm)' : 'none',
+          transition: 'all var(--duration-200) ease-in-out',
+          ...(props.style || {}),
+        }}
         className={cn(accordionItemVariants(), className)}
         {...props}
       >

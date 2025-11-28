@@ -3,7 +3,7 @@
 import { forwardRef } from 'react';
 import { Slot } from '../Slot';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 const textVariants = cva('', {
   variants: {

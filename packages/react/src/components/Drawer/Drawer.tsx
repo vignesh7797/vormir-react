@@ -169,6 +169,11 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
           aria-modal="true"
           aria-labelledby={title ? 'drawer-title' : undefined}
           aria-describedby={description ? 'drawer-description' : undefined}
+          style={{
+            boxShadow: 'var(--shadow-xl)',
+            transition: 'transform var(--duration-300) var(--ease-in-out), box-shadow var(--transition-base)',
+            ...(props.style || {}),
+          }}
           className={cn(drawerVariants({ position, size }), getTransform(), className)}
           {...props}
         >

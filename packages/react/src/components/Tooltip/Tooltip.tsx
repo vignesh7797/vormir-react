@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useState, useRef, useEffect, forwardRef } from 'react';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 export interface TooltipProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'content'> {
   /** Content to show in tooltip */
@@ -78,8 +78,13 @@ export const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
         {show && (
           <div
             role="tooltip"
+            style={{
+              borderRadius: 'var(--tooltip-radius)',
+              boxShadow: 'var(--shadow-sm)',
+              transition: 'var(--transition-base)',
+            }}
             className={cn(
-              'absolute z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95',
+              'absolute z-50 overflow-hidden border bg-popover px-3 py-1.5 text-sm text-popover-foreground animate-in fade-in-0 zoom-in-95',
               positionClasses[position],
               className
             )}

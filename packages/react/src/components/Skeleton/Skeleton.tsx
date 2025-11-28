@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { forwardRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 const skeletonVariants = cva('animate-pulse rounded-md bg-muted', {
   variants: {
@@ -58,12 +58,13 @@ export const Skeleton = forwardRef<HTMLDivElement, SkeletonProps>(
     return (
       <div
         ref={ref}
-        className={cn(skeletonVariants({ variant }), className)}
         style={{
+          borderRadius: 'var(--radius-md)',
           width: typeof width === 'number' ? `${width}px` : width,
           height: typeof height === 'number' ? `${height}px` : height,
           ...style,
         }}
+        className={cn(skeletonVariants({ variant }), className)}
         {...props}
       />
     );

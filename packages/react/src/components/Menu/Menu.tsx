@@ -271,6 +271,11 @@ export const MenuContent = React.forwardRef<HTMLDivElement, MenuContentProps>(
         }}
         role="menu"
         onKeyDown={handleKeyDown}
+        style={{
+          borderRadius: 'var(--card-radius)',
+          boxShadow: 'var(--shadow-md)',
+          transition: 'var(--transition-base)',
+        }}
         className={cn(menuContentVariants({ position }), className)}
         {...props}
       >

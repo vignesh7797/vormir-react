@@ -93,6 +93,10 @@ export const Code = React.forwardRef<HTMLPreElement, CodeProps>(
         )}
         <pre
           ref={ref}
+          style={{
+            borderRadius: 'var(--card-radius)',
+            transition: 'var(--transition-base)',
+          }}
           className={cn(codeVariants({ variant, size }), language && 'pt-8', className)}
           {...props}
         >

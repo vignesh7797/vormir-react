@@ -157,6 +157,10 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             onClick={() => handlePageChange(1)}
             disabled={currentPage === 1}
             aria-label="Go to first page"
+            style={{
+              borderRadius: 'var(--button-radius)',
+              transition: 'var(--transition-button)',
+            }}
             className={cn(paginationButtonVariants({ variant, size, active: false }))}
           >
             {firstLabel}
@@ -170,6 +174,10 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
             aria-label="Go to previous page"
+            style={{
+              borderRadius: 'var(--button-radius)',
+              transition: 'var(--transition-button)',
+            }}
             className={cn(paginationButtonVariants({ variant, size, active: false }))}
           >
             {previousLabel}
@@ -199,6 +207,10 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
                 onClick={() => handlePageChange(page)}
                 aria-label={`Go to page ${page}`}
                 aria-current={isActive ? 'page' : undefined}
+                style={{
+                  borderRadius: 'var(--button-radius)',
+                  transition: 'var(--transition-button)',
+                }}
                 className={cn(paginationButtonVariants({ variant, size, active: isActive }))}
               >
                 {page}
@@ -213,6 +225,10 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
             aria-label="Go to next page"
+            style={{
+              borderRadius: 'var(--button-radius)',
+              transition: 'var(--transition-button)',
+            }}
             className={cn(paginationButtonVariants({ variant, size, active: false }))}
           >
             {nextLabel}
@@ -225,6 +241,10 @@ export const Pagination = React.forwardRef<HTMLElement, PaginationProps>(
             type="button"
             onClick={() => handlePageChange(totalPages)}
             disabled={currentPage === totalPages}
+            style={{
+              borderRadius: 'var(--button-radius)',
+              transition: 'var(--transition-button)',
+            }}
             aria-label="Go to last page"
             className={cn(paginationButtonVariants({ variant, size, active: false }))}
           >

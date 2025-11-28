@@ -4,7 +4,7 @@ import * as React from 'react';
 import { createContext, useContext, useState, useCallback } from 'react';
 import { cva } from 'class-variance-authority';
 import { X, CheckCircle, AlertCircle, AlertTriangle, Info } from 'lucide-react';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 const toastVariants = cva(
   'group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full',
@@ -151,6 +151,11 @@ function ToastItem({ toast, onClose }: ToastItemProps) {
 
   return (
     <div
+      style={{
+        borderRadius: 'var(--card-radius)',
+        boxShadow: 'var(--shadow-lg)',
+        transition: 'var(--transition-base)',
+      }}
       className={cn(toastVariants({ variant: toast.variant }))}
       role="alert"
       aria-live="assertive"

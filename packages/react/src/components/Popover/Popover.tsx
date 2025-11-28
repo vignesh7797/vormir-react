@@ -90,8 +90,13 @@ export const Popover: React.FC<PopoverProps> = ({
       {open && (
         <div
           ref={contentRef}
+          style={{
+            borderRadius: 'var(--dialog-radius)',
+            boxShadow: 'var(--shadow-md)',
+            transition: 'var(--transition-base)',
+          }}
           className={cn(
-            'absolute z-50 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 shadow-lg p-4',
+            'absolute z-50 border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 p-4',
             positionClasses[position],
             alignClasses[align]
           )}

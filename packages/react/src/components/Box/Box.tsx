@@ -2,7 +2,7 @@
 
 import { forwardRef } from 'react';
 import { Slot } from '../Slot';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   /** Change the default rendered element */

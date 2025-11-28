@@ -4,7 +4,7 @@
 
 **A modern, customizable, and accessible React UI library**
 
-[![npm version](https://img.shields.io/npm/v/@vormir/react.svg)](https://www.npmjs.com/package/@vormir/react)
+[![npm version](https://img.shields.io/npm/v/@vormir-tech/react.svg)](https://www.npmjs.com/package/@vormir-tech/react)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18+-61dafb)](https://reactjs.org/)

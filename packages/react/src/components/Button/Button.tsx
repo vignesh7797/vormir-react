@@ -4,10 +4,10 @@ import { forwardRef } from 'react';
 import { Slot } from '../Slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Loader2 } from 'lucide-react';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none disabled:pointer-events-none',
   {
     variants: {
       variant: {
@@ -17,11 +17,11 @@ const buttonVariants = cva(
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
-        xs: 'h-7 px-2 text-xs',
-        sm: 'h-8 px-3 text-xs',
-        md: 'h-10 px-4',
-        lg: 'h-11 px-6',
-        xl: 'h-12 px-8 text-base',
+        xs: 'h-7 text-xs',
+        sm: 'h-8 text-xs',
+        md: 'h-10',
+        lg: 'h-11',
+        xl: 'h-12 text-base',
       },
       colorScheme: {
         brand: '',
@@ -106,6 +106,13 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         ref={ref}
         className={cn(buttonVariants({ variant, size, colorScheme, className }))}
+        style={{
+          borderRadius: 'var(--button-radius)',
+          padding: size === 'xs' || size === 'sm' ? 'var(--button-padding-sm)' : size === 'lg' || size === 'xl' ? 'var(--button-padding-lg)' : 'var(--button-padding-md)',
+          transition: 'var(--transition-button)',
+          boxShadow: variant === 'solid' ? 'var(--shadow-sm)' : undefined,
+          ...(props.style || {}),
+        }}
         disabled={disabled || isLoading}
         {...props}
       >

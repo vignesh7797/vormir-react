@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { forwardRef, useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Whether the modal is open */
@@ -120,8 +120,14 @@ export const Modal = forwardRef<HTMLDivElement, ModalProps>(
         {/* Modal Content */}
         <div
           ref={finalRef}
+          style={{
+            borderRadius: 'var(--dialog-radius)',
+            boxShadow: 'var(--shadow-xl)',
+            transition: 'var(--transition-base)',
+            ...(props.style || {}),
+          }}
           className={cn(
-            'relative z-50 w-full rounded-lg border bg-background p-6 shadow-lg animate-in fade-in zoom-in-95',
+            'relative z-50 w-full border bg-background p-6 animate-in fade-in zoom-in-95',
             sizeClasses[size],
             className
           )}

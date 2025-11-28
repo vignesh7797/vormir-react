@@ -14,8 +14,12 @@ export const Kbd = React.forwardRef<HTMLElement, KbdProps>(
     return (
       <kbd
         ref={ref}
+        style={{
+          borderRadius: 'var(--radius-sm)',
+          transition: 'var(--transition-base)',
+        }}
         className={cn(
-          'inline-flex h-5 items-center gap-1 rounded border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 px-1.5 font-mono text-[10px] font-medium text-neutral-600 dark:text-neutral-400 shadow-sm',
+          'inline-flex h-5 items-center gap-1 border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 px-1.5 font-mono text-[10px] font-medium text-neutral-600 dark:text-neutral-400 shadow-sm',
           className
         )}
         {...props}

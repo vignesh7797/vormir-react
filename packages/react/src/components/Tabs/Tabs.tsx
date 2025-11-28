@@ -246,6 +246,10 @@ export const TabsList = React.forwardRef<HTMLDivElement, TabsListProps>(
         role="tablist"
         aria-orientation={orientation}
         onKeyDown={handleKeyDown}
+        style={{
+          borderRadius: 'var(--radius-md)',
+          transition: 'var(--transition-base)',
+        }}
         className={cn(tabsListVariants({ orientation, variant }), className)}
         {...props}
       >

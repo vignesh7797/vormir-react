@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: [
@@ -21,6 +22,20 @@ const config: StorybookConfig = {
   },
   core: {
     disableTelemetry: true,
+  },
+  async viteFinal(config) {
+    const alias = config.resolve?.alias || {};
+
+    return {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...(typeof alias === 'object' ? alias : {}),
+          '@': path.resolve(process.cwd(), 'packages/react/src'),
+        },
+      },
+    };
   },
 };
 

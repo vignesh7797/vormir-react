@@ -4,10 +4,10 @@ import * as React from 'react';
 import { forwardRef } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { X, AlertCircle, CheckCircle, AlertTriangle, Info } from 'lucide-react';
-import { cn } from '@/utils';
+import { cn } from '../../utils';
 
 const alertVariants = cva(
-  'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground',
+  'relative w-full border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground',
   {
     variants: {
       variant: {
@@ -73,6 +73,11 @@ export const Alert = forwardRef<HTMLDivElement, AlertProps>(
       <div
         ref={ref}
         role="alert"
+        style={{
+          borderRadius: 'var(--card-radius)',
+          transition: 'var(--transition-base)',
+          ...(props.style || {}),
+        }}
         className={cn(alertVariants({ variant }), className)}
         {...props}
       >
