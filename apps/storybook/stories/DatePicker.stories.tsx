@@ -9,6 +9,16 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: 'select',
+      options: ['outline', 'filled'],
+    },
+    mode: {
+      control: 'select',
+      options: ['single', 'range'],
+    },
+  },
 } satisfies Meta<typeof DatePicker>;
 
 export default meta;
@@ -38,6 +48,13 @@ export const Filled: Story = {
   args: {
     mode: 'single',
     variant: 'filled',
+  },
+};
+
+export const WithMonthYearPicker: Story = {
+  args: {
+    mode: 'single',
+    showMonthYearPicker: true,
   },
 };
 
@@ -77,6 +94,13 @@ export const RangeMode: Story = {
   },
 };
 
+export const RangeModeWithPresets: Story = {
+  args: {
+    mode: 'range',
+    showPresets: true,
+  },
+};
+
 export const RangeModeWithDefault: Story = {
   args: {
     mode: 'range',
@@ -84,6 +108,14 @@ export const RangeModeWithDefault: Story = {
       new Date(new Date().setDate(new Date().getDate() - 3)),
       new Date(new Date().setDate(new Date().getDate() + 3)),
     ],
+  },
+};
+
+export const RangeWithPresetsAndPicker: Story = {
+  args: {
+    mode: 'range',
+    showPresets: true,
+    showMonthYearPicker: true,
   },
 };
 
@@ -147,6 +179,35 @@ export const ControlledRange: Story = {
           >
             Clear
           </button>
+        </div>
+      </div>
+    );
+  },
+  args: {},
+};
+
+export const AdvancedRangePicker: Story = {
+  render: (args) => {
+    const [range, setRange] = useState<[Date | null, Date | null]>([null, null]);
+    return (
+      <div className="space-y-4">
+        <DatePicker
+          {...args}
+          mode="range"
+          showPresets
+          showMonthYearPicker
+          rangeValue={range}
+          onRangeChange={setRange}
+        />
+        <div className="p-4 bg-neutral-50 dark:bg-neutral-900 rounded-lg">
+          <div className="text-sm font-medium text-neutral-900 dark:text-neutral-100 mb-2">
+            Selected Range:
+          </div>
+          <div className="text-sm text-neutral-600 dark:text-neutral-400">
+            Start: {range[0] ? range[0].toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' }) : 'Not selected'}
+            <br />
+            End: {range[1] ? range[1].toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' }) : 'Not selected'}
+          </div>
         </div>
       </div>
     );
