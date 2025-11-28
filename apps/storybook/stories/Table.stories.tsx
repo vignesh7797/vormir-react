@@ -18,6 +18,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  args: {},
 } satisfies Meta<typeof Table>;
 
 export default meta;

@@ -9,6 +9,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  args: {},
 } satisfies Meta<typeof Stat>;
 
 export default meta;

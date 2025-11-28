@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Badge, BadgeGroup } from '@vormir/react';
 import { X, Check } from 'lucide-react';
@@ -9,6 +10,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  args: {},
 } satisfies Meta<typeof Badge>;
 
 export default meta;
@@ -187,5 +189,3 @@ export const StatusBadges: Story = {
     </div>
   ),
 };
-
-import React from 'react';

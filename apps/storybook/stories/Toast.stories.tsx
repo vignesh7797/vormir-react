@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ToastProvider, useToast, toast } from '@vormir/react';
+import { ToastProvider, useToast } from '@vormir/react';
 import { Button } from '@vormir/react';
 
 const meta = {
@@ -9,6 +9,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  args: {},
 } satisfies Meta<typeof ToastProvider>;
 
 export default meta;
