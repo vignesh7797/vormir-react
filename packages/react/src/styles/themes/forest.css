@@ -1,0 +1,298 @@
+/* ============================================ */
+/* FOREST THEME - Green & Earth Tones          */
+/* ============================================ */
+
+@layer base {
+  [data-theme='forest'] {
+    /* Backgrounds - Natural, earthy */
+    --background: 45 25% 98%;
+    --foreground: 155 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 155 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 30% 12%;
+
+    /* Brand Colors - Forest Green */
+    --brand-50: 155 65% 97%;
+    --brand-100: 155 60% 92%;
+    --brand-200: 155 58% 84%;
+    --brand-300: 155 56% 72%;
+    --brand-400: 155 54% 58%;
+    --brand-500: 155 52% 46%;
+    --brand-600: 155 58% 38%;
+    --brand-700: 155 62% 30%;
+    --brand-800: 155 65% 24%;
+    --brand-900: 155 68% 18%;
+    --brand-950: 155 72% 12%;
+
+    /* Primary - Deep Forest Green */
+    --primary: 155 58% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 45 20% 92%;
+    --secondary-foreground: 155 30% 20%;
+
+    /* Muted */
+    --muted: 45 25% 95%;
+    --muted-foreground: 45 15% 40%;
+
+    /* Accent - Autumn Orange */
+    --accent: 25 90% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Semantic Colors */
+    --success: 155 58% 38%;
+    --success-foreground: 0 0% 100%;
+    --success-50: 155 65% 97%;
+    --success-100: 155 60% 92%;
+    --success-200: 155 58% 84%;
+    --success-300: 155 56% 72%;
+    --success-400: 155 54% 58%;
+    --success-500: 155 52% 46%;
+    --success-600: 155 58% 38%;
+    --success-700: 155 62% 30%;
+    --success-800: 155 65% 24%;
+    --success-900: 155 68% 18%;
+
+    --error: 0 75% 52%;
+    --error-foreground: 0 0% 100%;
+    --error-50: 0 90% 97%;
+    --error-100: 0 85% 92%;
+    --error-200: 0 82% 85%;
+    --error-300: 0 80% 75%;
+    --error-400: 0 78% 65%;
+    --error-500: 0 75% 52%;
+    --error-600: 0 77% 45%;
+    --error-700: 0 78% 38%;
+    --error-800: 0 80% 30%;
+    --error-900: 0 82% 22%;
+
+    --warning: 40 96% 50%;
+    --warning-foreground: 155 30% 12%;
+    --warning-50: 40 100% 96%;
+    --warning-100: 40 98% 88%;
+    --warning-200: 40 96% 78%;
+    --warning-300: 40 94% 66%;
+    --warning-400: 40 95% 58%;
+    --warning-500: 40 96% 50%;
+    --warning-600: 40 92% 42%;
+    --warning-700: 40 88% 34%;
+    --warning-800: 40 82% 26%;
+    --warning-900: 40 75% 18%;
+
+    --info: 185 80% 42%;
+    --info-foreground: 0 0% 100%;
+    --info-50: 185 85% 96%;
+    --info-100: 185 82% 88%;
+    --info-200: 185 80% 78%;
+    --info-300: 185 78% 65%;
+    --info-400: 185 76% 54%;
+    --info-500: 185 80% 42%;
+    --info-600: 185 82% 35%;
+    --info-700: 185 84% 28%;
+    --info-800: 185 86% 22%;
+    --info-900: 185 88% 16%;
+
+    /* Neutral Colors - Warm earth tones */
+    --neutral-50: 45 20% 97%;
+    --neutral-100: 45 18% 93%;
+    --neutral-200: 45 15% 86%;
+    --neutral-300: 45 12% 72%;
+    --neutral-400: 45 10% 58%;
+    --neutral-500: 45 8% 45%;
+    --neutral-600: 45 10% 36%;
+    --neutral-700: 45 12% 28%;
+    --neutral-800: 45 14% 20%;
+    --neutral-900: 45 16% 13%;
+
+    /* Borders & Inputs */
+    --border: 45 25% 88%;
+    --input: 45 25% 88%;
+    --ring: 155 58% 38%;
+
+    /* Destructive */
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Typography - Organic, slightly rounded */
+    --font-sans: 'Nunito', 'Rounded Mplus', -apple-system, sans-serif;
+    --font-serif: 'Georgia', serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+
+    /* Spacing Scale */
+    --space-0: 0;
+    --space-0-5: 0.125rem;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* Border Radius - Very rounded, organic */
+    --radius-none: 0;
+    --radius-sm: 0.75rem;    /* 12px - more rounded */
+    --radius-base: 1rem;     /* 16px */
+    --radius-md: 1.25rem;    /* 20px */
+    --radius-lg: 1.5rem;     /* 24px */
+    --radius-xl: 1.75rem;    /* 28px */
+    --radius-2xl: 2rem;      /* 32px */
+    --radius-full: 9999px;
+
+    --button-radius: var(--radius-md);
+    --card-radius: var(--radius-xl);
+    --input-radius: var(--radius-md);
+    --badge-radius: var(--radius-full);
+    --avatar-radius: var(--radius-full);
+    --dialog-radius: var(--radius-2xl);
+    --tooltip-radius: var(--radius-md);
+
+    --button-padding-sm: var(--space-2) var(--space-3);
+    --button-padding-md: var(--space-3) var(--space-5);
+    --button-padding-lg: var(--space-4) var(--space-6);
+    --card-padding: var(--space-6);
+    --input-padding: var(--space-3) var(--space-4);
+    --dialog-padding: var(--space-6);
+
+    /* Shadow System - Diffused, warm-tinted */
+    --shadow-color: 45 30% 25%;
+    --shadow-color-strong: 155 40% 15%;
+
+    --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.06);
+    --shadow-sm: 0 2px 4px 0 hsl(var(--shadow-color) / 0.08),
+                 0 1px 2px -1px hsl(var(--shadow-color) / 0.08);
+    --shadow-base: 0 4px 8px -1px hsl(var(--shadow-color) / 0.1),
+                   0 2px 4px -2px hsl(var(--shadow-color) / 0.08);
+    --shadow-md: 0 10px 20px -3px hsl(var(--shadow-color) / 0.12),
+                 0 4px 6px -4px hsl(var(--shadow-color) / 0.1);
+    --shadow-lg: 0 20px 30px -5px hsl(var(--shadow-color) / 0.15),
+                 0 8px 10px -6px hsl(var(--shadow-color) / 0.1);
+    --shadow-xl: 0 25px 50px -12px hsl(var(--shadow-color) / 0.2);
+    --shadow-2xl: 0 50px 100px -20px hsl(var(--shadow-color) / 0.25);
+
+    --shadow-focus: 0 0 0 3px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 25px hsl(var(--primary) / 0.2);
+
+    /* Transitions - Gentle, flowing */
+    --duration-75: 75ms;
+    --duration-100: 100ms;
+    --duration-150: 150ms;
+    --duration-200: 200ms;
+    --duration-250: 250ms;
+    --duration-300: 300ms;
+    --duration-400: 400ms;
+    --duration-500: 500ms;
+    --duration-700: 700ms;
+    --duration-1000: 1000ms;
+
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --transition-base: var(--duration-300) var(--ease-out);
+    --transition-colors: color, background-color, border-color var(--duration-250) var(--ease-out);
+    --transition-button: var(--duration-250) var(--ease-out);
+    --transition-dialog: var(--duration-400) var(--ease-out);
+    --transition-tooltip: var(--duration-150) var(--ease-out);
+
+    /* Focus & Interaction States */
+    --focus-ring-width: 3px;
+    --focus-ring-offset: 2px;
+    --focus-ring-color: hsl(var(--primary) / 0.5);
+
+    --hover-opacity: 0.92;
+    --hover-scale: 1.01;
+
+    --active-opacity: 0.96;
+    --active-scale: 0.99;
+
+    --disabled-opacity: 0.5;
+    --disabled-cursor: not-allowed;
+  }
+
+  [data-theme='forest'].dark {
+    /* Backgrounds - Deep forest night */
+    --background: 155 25% 8%;
+    --foreground: 45 20% 95%;
+    --card: 155 22% 11%;
+    --card-foreground: 45 20% 95%;
+    --popover: 155 20% 13%;
+    --popover-foreground: 45 20% 95%;
+
+    /* Primary - Brighter green */
+    --primary: 155 52% 48%;
+    --primary-foreground: 155 25% 8%;
+
+    /* Secondary */
+    --secondary: 155 18% 18%;
+    --secondary-foreground: 45 20% 90%;
+
+    /* Muted */
+    --muted: 155 18% 16%;
+    --muted-foreground: 45 15% 60%;
+
+    /* Accent - Warm autumn */
+    --accent: 25 92% 58%;
+    --accent-foreground: 155 25% 8%;
+
+    /* Semantic Colors */
+    --success: 155 52% 48%;
+    --success-foreground: 155 25% 8%;
+
+    --error: 0 72% 58%;
+    --error-foreground: 155 25% 8%;
+
+    --warning: 40 96% 58%;
+    --warning-foreground: 155 25% 8%;
+
+    --info: 185 75% 48%;
+    --info-foreground: 155 25% 8%;
+
+    /* Borders & Inputs */
+    --border: 155 20% 22%;
+    --input: 155 20% 22%;
+    --ring: 155 52% 48%;
+
+    /* Destructive */
+    --destructive: 0 72% 58%;
+    --destructive-foreground: 155 25% 8%;
+  }
+}

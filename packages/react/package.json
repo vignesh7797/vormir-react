@@ -1,0 +1,103 @@
+{
+  "name": "@vormir-tech/react",
+  "version": "0.1.0",
+  "description": "A modern, accessible, and customizable React UI component library with built-in theming and dark mode support",
+  "keywords": [
+    "react",
+    "react-component",
+    "ui",
+    "components",
+    "component-library",
+    "design-system",
+    "ui-library",
+    "tailwind",
+    "tailwindcss",
+    "typescript",
+    "dark-mode",
+    "theme",
+    "accessibility",
+    "a11y",
+    "aria",
+    "headless-ui",
+    "radix-ui",
+    "shadcn",
+    "forms",
+    "responsive"
+  ],
+  "author": {
+    "name": "Vignesh",
+    "email": "vignesh7797@gmail.com",
+    "url": "https://github.com/vignesh7797"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vignesh7797/vormir-react.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/vignesh7797/vormir-react#readme",
+  "bugs": {
+    "url": "https://github.com/vignesh7797/vormir-react/issues"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./theme": {
+      "import": "./dist/theme.js",
+      "require": "./dist/theme.cjs",
+      "types": "./dist/theme.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.307.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^1.2.0",
+    "autoprefixer": "^10.4.17",
+    "jsdom": "^23.2.0",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7",
+    "vite": "^5.0.11",
+    "vite-plugin-dts": "^3.7.0",
+    "vitest": "^1.2.0"
+  }
+}

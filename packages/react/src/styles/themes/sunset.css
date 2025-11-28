@@ -1,0 +1,298 @@
+/* ============================================ */
+/* SUNSET THEME - Orange & Pink Gradients      */
+/* ============================================ */
+
+@layer base {
+  [data-theme='sunset'] {
+    /* Backgrounds - Warm sunset */
+    --background: 15 30% 98%;
+    --foreground: 340 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 12%;
+
+    /* Brand Colors - Sunset Orange */
+    --brand-50: 15 100% 97%;
+    --brand-100: 15 95% 92%;
+    --brand-200: 15 92% 85%;
+    --brand-300: 15 90% 75%;
+    --brand-400: 15 88% 65%;
+    --brand-500: 15 85% 55%;
+    --brand-600: 15 88% 48%;
+    --brand-700: 15 90% 40%;
+    --brand-800: 15 92% 32%;
+    --brand-900: 15 94% 24%;
+    --brand-950: 15 96% 16%;
+
+    /* Primary - Vibrant Orange */
+    --primary: 15 88% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 15 20% 92%;
+    --secondary-foreground: 340 30% 20%;
+
+    /* Muted */
+    --muted: 15 25% 95%;
+    --muted-foreground: 15 15% 40%;
+
+    /* Accent - Rose Pink */
+    --accent: 340 82% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Semantic Colors */
+    --success: 155 65% 42%;
+    --success-foreground: 0 0% 100%;
+    --success-50: 155 70% 97%;
+    --success-100: 155 68% 92%;
+    --success-200: 155 66% 84%;
+    --success-300: 155 64% 72%;
+    --success-400: 155 63% 58%;
+    --success-500: 155 65% 42%;
+    --success-600: 155 67% 35%;
+    --success-700: 155 69% 28%;
+    --success-800: 155 71% 22%;
+    --success-900: 155 73% 16%;
+
+    --error: 355 90% 58%;
+    --error-foreground: 0 0% 100%;
+    --error-50: 355 100% 97%;
+    --error-100: 355 95% 92%;
+    --error-200: 355 92% 85%;
+    --error-300: 355 90% 75%;
+    --error-400: 355 88% 65%;
+    --error-500: 355 90% 58%;
+    --error-600: 355 92% 50%;
+    --error-700: 355 93% 42%;
+    --error-800: 355 94% 34%;
+    --error-900: 355 95% 26%;
+
+    --warning: 40 96% 58%;
+    --warning-foreground: 340 30% 12%;
+    --warning-50: 40 100% 96%;
+    --warning-100: 40 98% 88%;
+    --warning-200: 40 96% 78%;
+    --warning-300: 40 94% 66%;
+    --warning-400: 40 95% 58%;
+    --warning-500: 40 96% 50%;
+    --warning-600: 40 92% 42%;
+    --warning-700: 40 88% 34%;
+    --warning-800: 40 82% 26%;
+    --warning-900: 40 75% 18%;
+
+    --info: 200 85% 52%;
+    --info-foreground: 0 0% 100%;
+    --info-50: 200 90% 96%;
+    --info-100: 200 88% 90%;
+    --info-200: 200 86% 82%;
+    --info-300: 200 84% 70%;
+    --info-400: 200 85% 60%;
+    --info-500: 200 85% 52%;
+    --info-600: 200 87% 45%;
+    --info-700: 200 88% 38%;
+    --info-800: 200 90% 30%;
+    --info-900: 200 92% 22%;
+
+    /* Neutral Colors - Warm peachy */
+    --neutral-50: 15 25% 97%;
+    --neutral-100: 15 22% 93%;
+    --neutral-200: 15 18% 86%;
+    --neutral-300: 15 14% 72%;
+    --neutral-400: 15 11% 58%;
+    --neutral-500: 15 9% 45%;
+    --neutral-600: 15 11% 36%;
+    --neutral-700: 15 13% 28%;
+    --neutral-800: 15 15% 20%;
+    --neutral-900: 15 17% 13%;
+
+    /* Borders & Inputs */
+    --border: 15 25% 88%;
+    --input: 15 25% 88%;
+    --ring: 15 88% 48%;
+
+    /* Destructive */
+    --destructive: 355 90% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Typography - Bold, expressive */
+    --font-sans: 'Poppins', 'Geometric Sans', -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', 'Georgia', serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+
+    /* Spacing Scale */
+    --space-0: 0;
+    --space-0-5: 0.125rem;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* Border Radius - Mixed sharp/round */
+    --radius-none: 0;
+    --radius-sm: 0.25rem;    /* 4px - sharp */
+    --radius-base: 0.5rem;   /* 8px */
+    --radius-md: 0.75rem;    /* 12px */
+    --radius-lg: 1rem;       /* 16px */
+    --radius-xl: 1.5rem;     /* 24px - rounded */
+    --radius-2xl: 2rem;      /* 32px */
+    --radius-full: 9999px;
+
+    --button-radius: var(--radius-lg);
+    --card-radius: var(--radius-sm);
+    --input-radius: var(--radius-md);
+    --badge-radius: var(--radius-full);
+    --avatar-radius: var(--radius-full);
+    --dialog-radius: var(--radius-xl);
+    --tooltip-radius: var(--radius-base);
+
+    --button-padding-sm: var(--space-2) var(--space-3);
+    --button-padding-md: var(--space-3) var(--space-5);
+    --button-padding-lg: var(--space-4) var(--space-6);
+    --card-padding: var(--space-6);
+    --input-padding: var(--space-3) var(--space-4);
+    --dialog-padding: var(--space-6);
+
+    /* Shadow System - Dramatic with color tint */
+    --shadow-color: 15 60% 30%;
+    --shadow-color-strong: 340 70% 20%;
+
+    --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.1);
+    --shadow-sm: 0 2px 4px 0 hsl(var(--shadow-color) / 0.12),
+                 0 1px 2px -1px hsl(var(--shadow-color) / 0.12);
+    --shadow-base: 0 4px 8px -1px hsl(var(--shadow-color) / 0.15),
+                   0 2px 4px -2px hsl(var(--shadow-color) / 0.12);
+    --shadow-md: 0 10px 20px -3px hsl(var(--shadow-color) / 0.2),
+                 0 4px 6px -4px hsl(var(--shadow-color) / 0.15);
+    --shadow-lg: 0 20px 30px -5px hsl(var(--shadow-color) / 0.25),
+                 0 8px 10px -6px hsl(var(--shadow-color) / 0.18);
+    --shadow-xl: 0 25px 50px -12px hsl(var(--shadow-color) / 0.3);
+    --shadow-2xl: 0 50px 100px -20px hsl(var(--shadow-color) / 0.35);
+
+    --shadow-focus: 0 0 0 3px hsl(var(--primary) / 0.3);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.4);
+
+    /* Transitions - Energetic, snappy */
+    --duration-75: 75ms;
+    --duration-100: 100ms;
+    --duration-150: 150ms;
+    --duration-200: 200ms;
+    --duration-250: 250ms;
+    --duration-300: 300ms;
+    --duration-400: 400ms;
+    --duration-500: 500ms;
+    --duration-700: 700ms;
+    --duration-1000: 1000ms;
+
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --transition-base: var(--duration-200) var(--ease-out);
+    --transition-colors: color, background-color, border-color var(--duration-150) var(--ease-out);
+    --transition-button: var(--duration-150) var(--ease-bounce);
+    --transition-dialog: var(--duration-250) var(--ease-in-out);
+    --transition-tooltip: var(--duration-100) var(--ease-out);
+
+    /* Focus & Interaction States */
+    --focus-ring-width: 2px;
+    --focus-ring-offset: 2px;
+    --focus-ring-color: hsl(var(--primary) / 0.6);
+
+    --hover-opacity: 0.85;
+    --hover-scale: 1.05;
+
+    --active-opacity: 0.9;
+    --active-scale: 0.95;
+
+    --disabled-opacity: 0.5;
+    --disabled-cursor: not-allowed;
+  }
+
+  [data-theme='sunset'].dark {
+    /* Backgrounds - Deep twilight */
+    --background: 340 25% 8%;
+    --foreground: 15 25% 95%;
+    --card: 340 22% 11%;
+    --card-foreground: 15 25% 95%;
+    --popover: 340 20% 13%;
+    --popover-foreground: 15 25% 95%;
+
+    /* Primary - Bright sunset glow */
+    --primary: 15 90% 58%;
+    --primary-foreground: 340 25% 8%;
+
+    /* Secondary */
+    --secondary: 340 18% 18%;
+    --secondary-foreground: 15 25% 90%;
+
+    /* Muted */
+    --muted: 340 18% 16%;
+    --muted-foreground: 15 15% 60%;
+
+    /* Accent - Vibrant rose */
+    --accent: 340 85% 60%;
+    --accent-foreground: 340 25% 8%;
+
+    /* Semantic Colors */
+    --success: 155 60% 48%;
+    --success-foreground: 340 25% 8%;
+
+    --error: 355 85% 65%;
+    --error-foreground: 340 25% 8%;
+
+    --warning: 40 96% 65%;
+    --warning-foreground: 340 25% 8%;
+
+    --info: 200 82% 58%;
+    --info-foreground: 340 25% 8%;
+
+    /* Borders & Inputs */
+    --border: 340 20% 22%;
+    --input: 340 20% 22%;
+    --ring: 15 90% 58%;
+
+    /* Destructive */
+    --destructive: 355 85% 65%;
+    --destructive-foreground: 340 25% 8%;
+  }
+}
