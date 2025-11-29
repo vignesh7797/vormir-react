@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../utils/cn';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import './DatePicker.css';
 
 const datepickerVariants = cva('datepicker', {
   variants: {

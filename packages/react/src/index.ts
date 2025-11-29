@@ -1,3 +1,6 @@
+// Global Styles
+import './styles/globals.css';
+
 // Primitives
 export { Box } from './components/Box';
 export { Button } from './components/Button';
