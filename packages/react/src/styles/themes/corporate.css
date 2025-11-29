@@ -296,3 +296,13 @@
     --destructive-foreground: 215 20% 10%;
   }
 }
+
+/* ============================================ */
+/* COMPONENT STYLES                             */
+/* Centralized styles for all components       */
+/* ============================================ */
+
+@layer components {
+  /* All component styles are inherited from globals.css */
+  /* Theme-specific overrides can be added here if needed */
+}
