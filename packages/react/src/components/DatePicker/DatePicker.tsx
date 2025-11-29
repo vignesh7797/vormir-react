@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '../../utils/cn';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import './DatePicker.css';
 
-const datepickerVariants = cva('inline-block rounded-xl bg-white dark:bg-neutral-950 shadow-sm', {
+const datepickerVariants = cva('datepicker', {
   variants: {
     variant: {
-      outline: 'border border-neutral-200 dark:border-neutral-800',
-      filled: 'border border-transparent bg-neutral-50 dark:bg-neutral-900',
+      outline: 'datepicker--outline',
+      filled: 'datepicker--filled',
     },
   },
   defaultVariants: {
@@ -253,11 +254,11 @@ export const DatePicker: React.FC<DatePickerProps> = ({
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="datepicker-wrapper">
       {/* Presets Sidebar for Range Mode */}
       {mode === 'range' && showPresets && (
-        <div className="flex flex-col gap-2 p-4 border-r border-neutral-200 dark:border-neutral-800">
-          <div className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+        <div className="datepicker__presets">
+          <div className="datepicker__presets-title">
             SELECT BY
           </div>
           {[
@@ -272,12 +273,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
               key={preset.value}
               onClick={() => handlePresetSelect(preset.value)}
               disabled={disabled}
-              className={cn(
-                'px-4 py-2 text-sm text-left rounded-lg transition-colors',
-                'hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                'text-neutral-700 dark:text-neutral-300',
-                disabled && 'opacity-50 cursor-not-allowed'
-              )}
+              className="datepicker__preset-button"
             >
               {preset.label}
             </button>
@@ -289,54 +285,41 @@ export const DatePicker: React.FC<DatePickerProps> = ({
       <div
         className={cn(
           datepickerVariants({ variant }),
-          'p-6',
-          disabled && 'opacity-50',
+          disabled && 'datepicker--disabled',
           className
         )}
       >
         {/* Header with Month/Year Selectors */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="datepicker__header">
           <button
             onClick={previousMonth}
             disabled={disabled}
-            className={cn(
-              'p-2 rounded-lg transition-colors',
-              'text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950',
-              'disabled:opacity-50 disabled:cursor-not-allowed'
-            )}
+            className="datepicker__nav-button"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          <div className="flex items-center gap-2">
+          <div className="datepicker__header-content">
             {showMonthYearPicker ? (
               <>
                 {/* Month Dropdown */}
-                <div className="relative">
+                <div className="datepicker__picker-dropdown">
                   <button
                     onClick={() => setShowMonthPicker(!showMonthPicker)}
                     disabled={disabled}
-                    className={cn(
-                      'px-4 py-2 rounded-lg border font-medium text-sm transition-colors',
-                      'border-blue-200 dark:border-blue-800',
-                      'text-neutral-900 dark:text-neutral-100',
-                      'hover:bg-blue-50 dark:hover:bg-blue-950',
-                      disabled && 'opacity-50 cursor-not-allowed'
-                    )}
+                    className="datepicker__picker-button"
                   >
                     {monthName} <ChevronLeft className="w-4 h-4 inline-block ml-1 -rotate-90" />
                   </button>
                   {showMonthPicker && (
-                    <div className="absolute top-full mt-2 z-10 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-lg p-2 grid grid-cols-3 gap-1">
+                    <div className="datepicker__picker-menu">
                       {months.map((month, index) => (
                         <button
                           key={month}
                           onClick={() => handleMonthSelect(index)}
                           className={cn(
-                            'px-4 py-2 rounded-lg text-sm transition-colors',
-                            index === currentMonth.getMonth()
-                              ? 'bg-blue-600 text-white'
-                              : 'hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300'
+                            'datepicker__picker-option',
+                            index === currentMonth.getMonth() && 'datepicker__picker-option--selected'
                           )}
                         >
                           {month.slice(0, 3)}
@@ -347,31 +330,23 @@ export const DatePicker: React.FC<DatePickerProps> = ({
                 </div>
 
                 {/* Year Dropdown */}
-                <div className="relative">
+                <div className="datepicker__picker-dropdown">
                   <button
                     onClick={() => setShowYearPicker(!showYearPicker)}
                     disabled={disabled}
-                    className={cn(
-                      'px-4 py-2 rounded-lg border font-medium text-sm transition-colors',
-                      'border-blue-200 dark:border-blue-800',
-                      'text-neutral-900 dark:text-neutral-100',
-                      'hover:bg-blue-50 dark:hover:bg-blue-950',
-                      disabled && 'opacity-50 cursor-not-allowed'
-                    )}
+                    className="datepicker__picker-button"
                   >
                     {year} <ChevronLeft className="w-4 h-4 inline-block ml-1 -rotate-90" />
                   </button>
                   {showYearPicker && (
-                    <div className="absolute top-full mt-2 z-10 bg-white dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800 rounded-xl shadow-lg p-2 grid grid-cols-3 gap-1 max-h-64 overflow-y-auto">
+                    <div className="datepicker__picker-menu datepicker__picker-menu--year">
                       {generateYears().map((y) => (
                         <button
                           key={y}
                           onClick={() => handleYearSelect(y)}
                           className={cn(
-                            'px-4 py-2 rounded-lg text-sm transition-colors',
-                            y === year
-                              ? 'bg-blue-600 text-white'
-                              : 'hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-700 dark:text-neutral-300'
+                            'datepicker__picker-option',
+                            y === year && 'datepicker__picker-option--selected'
                           )}
                         >
                           {y}
@@ -382,7 +357,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
                 </div>
               </>
             ) : (
-              <span className="font-semibold text-lg text-neutral-900 dark:text-neutral-100">
+              <span className="datepicker__month-year-display">
                 {monthYear}
               </span>
             )}
@@ -391,22 +366,18 @@ export const DatePicker: React.FC<DatePickerProps> = ({
           <button
             onClick={nextMonth}
             disabled={disabled}
-            className={cn(
-              'p-2 rounded-lg transition-colors',
-              'text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950',
-              'disabled:opacity-50 disabled:cursor-not-allowed'
-            )}
+            className="datepicker__nav-button"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
 
         {/* Weekday labels */}
-        <div className="grid grid-cols-7 gap-2 mb-3">
+        <div className="datepicker__weekdays">
           {['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((day) => (
             <div
               key={day}
-              className="text-center text-xs font-medium text-neutral-500 dark:text-neutral-400 py-2"
+              className="datepicker__weekday"
             >
               {day}
             </div>
@@ -414,7 +385,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
         </div>
 
         {/* Calendar grid */}
-        <div className="grid grid-cols-7 gap-2">
+        <div className="datepicker__calendar">
           {days.map((day, index) => {
             if (!day) {
               return <div key={`empty-${index}`} />;
@@ -434,26 +405,11 @@ export const DatePicker: React.FC<DatePickerProps> = ({
                 onClick={() => handleDateSelect(day)}
                 disabled={disabled || isDisabled}
                 className={cn(
-                  'relative aspect-square rounded-lg text-sm font-medium transition-all',
-                  'hover:scale-105',
-                  isDisabled &&
-                    'text-neutral-300 dark:text-neutral-700 cursor-not-allowed hover:scale-100',
-                  !isDisabled &&
-                    !isSelected &&
-                    !isInRange &&
-                    'hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                  isSelected &&
-                    'bg-blue-600 text-white hover:bg-blue-700 shadow-md',
-                  isInRange &&
-                    !isSelected &&
-                    'bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-100',
-                  !isDisabled &&
-                    !isSelected &&
-                    !isInRange &&
-                    'text-neutral-900 dark:text-neutral-100',
-                  isToday &&
-                    !isSelected &&
-                    'border-2 border-blue-600 dark:border-blue-400'
+                  'datepicker__day',
+                  isDisabled && 'datepicker__day--disabled',
+                  isSelected && 'datepicker__day--selected',
+                  isInRange && !isSelected && 'datepicker__day--in-range',
+                  isToday && 'datepicker__day--today'
                 )}
               >
                 {day.getDate()}
@@ -464,7 +420,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
 
         {/* Action Buttons */}
         {mode === 'range' && (
-          <div className="flex items-center justify-end gap-2 mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800">
+          <div className="datepicker__actions">
             <button
               onClick={() => {
                 if (rangeValue === undefined) {
@@ -473,23 +429,13 @@ export const DatePicker: React.FC<DatePickerProps> = ({
                 onRangeChange?.([null, null]);
               }}
               disabled={disabled}
-              className={cn(
-                'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
-                'text-neutral-700 dark:text-neutral-300',
-                'hover:bg-neutral-100 dark:hover:bg-neutral-800',
-                disabled && 'opacity-50 cursor-not-allowed'
-              )}
+              className="datepicker__action-button datepicker__action-button--cancel"
             >
               Cancel
             </button>
             <button
               disabled={disabled || !range[0] || !range[1]}
-              className={cn(
-                'px-6 py-2 rounded-lg text-sm font-medium transition-colors',
-                'bg-blue-600 text-white',
-                'hover:bg-blue-700 shadow-sm',
-                'disabled:opacity-50 disabled:cursor-not-allowed'
-              )}
+              className="datepicker__action-button datepicker__action-button--apply"
             >
               Apply
             </button>
